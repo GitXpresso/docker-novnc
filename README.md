@@ -7,10 +7,10 @@ A minimal image running x11 on Docker, including Openbox, Firefox, and accessibl
 2.  2. Anonymous access to the web
 > NOTE: the browser is considered to be in a proxy so use tor to access sites like reddit
 ```
-git clone https://github.com/light4/docker-novnc.git
+git clone https://github.com/gitxpresso/docker-novnc.git
 cd docker-novnc
 make
-docker run -td -p 6080:6080 docker-novnc
+docker run -td -p 6080:6080 --name brave brave
 ```
 
 
