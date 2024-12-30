@@ -30,7 +30,7 @@ RUN apt-get update && \
         net-tools \
         --no-install-recommends && \
         rm -rf /var/lib/apt/lists/*
-RUN 
+RUN curl -fsS https://dl.brave.com/install.sh | sh
 ENV DISPLAY :0.0
 
 WORKDIR /root/
