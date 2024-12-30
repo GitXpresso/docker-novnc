@@ -13,6 +13,7 @@ docker build -t brave .
 docker run -td -p 6080:6080 --name brave brave
 ```
 
+Go to `https://localhost:6080/vnc.html` to visit the vnc server
 
 
 ## Credits
