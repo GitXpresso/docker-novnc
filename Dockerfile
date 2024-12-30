@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER Light Ning <lightning1141@gmail.com>
+FROM ubuntu:latest
+LABEL maintainer=gitxpresso@outlook.com
 
 # setup a nearby package repository
 RUN rm /etc/apt/sources.list
@@ -19,9 +19,8 @@ RUN apt-get update && \
         xvfb \
         x11vnc \
         xdotool \
+        curl
         wget \
-        python \
-        python-numpy \
         unzip \
         firefox \
         openbox \
@@ -31,7 +30,7 @@ RUN apt-get update && \
         net-tools \
         --no-install-recommends && \
         rm -rf /var/lib/apt/lists/*
-
+RUN 
 ENV DISPLAY :0.0
 
 WORKDIR /root/
@@ -44,4 +43,4 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Expose Port
 EXPOSE 6080
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord", "/usr/bin/brave-browser"]
