@@ -9,7 +9,7 @@ A minimal image running x11 on Docker, including Openbox, Firefox, and accessibl
 ```
 git clone https://github.com/gitxpresso/docker-novnc.git
 cd docker-novnc
-make
+docker build -t brave .
 docker run -td -p 6080:6080 --name brave brave
 ```
 
