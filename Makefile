@@ -2,7 +2,7 @@ PORT= 6080
 
 all: brave
 
-$(CONTAINER):
+brave:
 	docker build -t brave .
 
 run:
