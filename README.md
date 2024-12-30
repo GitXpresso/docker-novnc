@@ -1,15 +1,11 @@
 docker-novnc
 ============
 
-在 Docker 上运行 x11 的最小化镜像, 包含了 Openbox, Firefox, 并且可以用浏览器访问
-
-## 用途
-
-1. 测试一些软件
-
-2. 匿名访问网络
-
-## 用法
+A minimal image running x11 on Docker, including Openbox, Firefox, and accessible with a browser
+## Uses 
+1. Test some software
+2.  2. Anonymous access to the web
+> NOTE: the browser is considered to be a proxy so use tor to access sites like reddit
 ```
 git clone https://github.com/light4/docker-novnc.git
 cd docker-novnc
@@ -17,7 +13,7 @@ make
 docker run -td -p 6080:6080 docker-novnc
 ```
 
-访问 <http://localhost:6080/vnc_auto.html> or <http://privateip:6080/vnc_auto.html> 即可
+
 
 ## Credits
 
