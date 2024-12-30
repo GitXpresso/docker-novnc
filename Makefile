@@ -1,18 +1,17 @@
-CONTAINER = docker-novnc
-PORT = 6080
+PORT= 6080
 
-all: $(CONTAINER)
+all: brave
 
 $(CONTAINER):
-	docker build -t $(CONTAINER) .
+	docker build -t brave .
 
 run:
-	docker run -d -p $(PORT):$(PORT) $(CONTAINER)
+	docker run -d -p 6080:6080 --name brave brave
 
 stop:
-	docker stop $$(docker ps -q)
+	docker stop brave
 
 .PHONY: clean
 clean:
-	docker rm $$(docker ps -a -q)
+	docker rm brave
 
