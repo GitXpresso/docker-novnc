@@ -5,7 +5,7 @@ A minimal image running x11 on Docker, including Openbox, Firefox, and accessibl
 ## Uses 
 1. Test some software
 2.  2. Anonymous access to the web
-> NOTE: the browser is considered to be a proxy so use tor to access sites like reddit
+> NOTE: the browser is considered to be in a proxy so use tor to access sites like reddit
 ```
 git clone https://github.com/light4/docker-novnc.git
 cd docker-novnc
